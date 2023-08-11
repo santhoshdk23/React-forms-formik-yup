@@ -1,5 +1,17 @@
+body{
+  /* background-image: url('https://66.media.tumblr.com/82da0a02ca6bc927a0bd9e40cdbcb4e4/tumblr_p017bjhjzy1wzjh0ro1_500.gif');
+   */
+  background-image: radial-gradient(blue,white);
+  background-size: cover;
+  height: 100vh;
+  padding:0;
+  margin:0;
+  
+}
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -18,24 +30,21 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #7da0b2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label{
+  display: flex;
+  align-items: center;
 }
+
 .App {
   display: flex;
   justify-content: center;
@@ -43,11 +52,12 @@
 
 label {
   font-weight: bold;
-  display: flex;
+  display:flex;
   margin-bottom: 5px;
 }
 
 input[type='text'],
+input[type='password'],
 input[type='email'],
 textarea {
   display: block;
@@ -63,10 +73,221 @@ textarea {
   /* margin-bottom: 20px; */
 }
 
+.form{
+  border: 10px double rgb(50, 17, 92);
+  padding: 2rem;
+  background-color: hsla(90, 46%, 63%, 0.374);
+  background-image: linear-gradient(rgba(48, 31, 202, 0.235),rgba(195, 189, 230, 0.491));
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+
+
+
+.left{
+  margin-top: 2px;
+}
+
+.left ul{
+  /* background-color: #1e1ee5; */
+  text-align: justify;
+
+}
+
+.left img{
+  padding-right: 2rem;
+  position: sticky
+ 
+
+}
+
 .form-control {
   margin-bottom: 20px;
 }
 
+
 .error {
   color: red;
+  background-color: #010112;
+  
+}
+
+button {
+  background-color:blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 2px solid black;
+  cursor: pointer;
+  width: 50%;
+  opacity: 1;
+  border-color: #282c34;
+}
+
+.btn{
+  display: flex;
+  /* justify-content: space-between; */
+  gap:4px
+}
+
+button:hover {
+  background-color: #010112;
+  color: whitesmoke;
+}
+
+.resetbtn {
+  padding: 14px 20px;
+  background-color: #4421cd;
+}
+
+
+.resetbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.signupbtn:disabled{
+  background-color:rgba(0, 0, 255, 0.187);
+  opacity: 0.5;
+  cursor: not-allowed;
+  
+}
+
+.container {
+  /* border: 2px solid rgb(46, 21, 146); */
+  height: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+
+  /* background-color: #36def4; */
+}
+
+hr {
+  border: 1px solid #353131;
+  margin-bottom: 25px;
+}
+
+
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 2rem;
+  background-image: linear-gradient(rgba(16, 94, 229, 0.502),rgba(130, 130, 170, 0.53));
+}
+
+.info img{
+  width: 600px;
+}
+
+.info p span{
+  text-shadow: 2px 4px 4px rgb(201, 189, 189);
+  font-weight: bolder;
+}
+
+.info p{
+  text-align: justify;
+  word-spacing: 1rem;
+  
+}
+
+.info hr{
+  width: 200px;
+  height: 5px ;
+  background-color: #070d19;
+
+}
+
+.navbar {
+  width: 100%;
+  /* background-color: #526eec; */
+  overflow: auto;
+  height: 75px;
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+  overflow: hidden;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 5;
+}
+
+.navbar a {
+  float:center;
+  padding: 12px;
+  color: rgb(64, 9, 9);
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-image: linear-gradient(rgba(94, 31, 202, 0.888),rgba(73, 73, 183, 0.874));
+  color: white;
+}
+
+.navbar p img{
+  width: 100px;
+  padding: 1rem;
+}
+
+.main h1 {
+  margin: 0%;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-image: linear-gradient(rgba(32, 14, 227, 0.66),rgba(16, 16, 28, 0.541));
+  color: #fff;
+}
+.footer a{
+  color: white;
+}
+.footer .getin{
+  width: 25ch;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form{
+    font-size: 12px;
+    width: 300px;
+  }
+ 
+  .form input {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .info{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .info img{
+    width:300px
+    
+  }
 }
